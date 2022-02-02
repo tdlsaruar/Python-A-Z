@@ -9,7 +9,9 @@
 # f=open("saruar.txt")
 # content=f.read()
 # print(content)
-f =opent("saruar.txt")
-for line in f:
-    print(line,end="")
-f.close()
+with open('saruar.txt',mode='r') as f:
+    print(f.read())
+with open ('saruar.txt',mode='a') as f:
+    f.write('\n this is fourth lines')
+with open ('saruar.txt',mode='r') as f:
+    print(f.read())
